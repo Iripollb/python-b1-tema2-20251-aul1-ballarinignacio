@@ -23,46 +23,54 @@ Ejemplo:
     Salida:
     En los 3 casos el resultado es 882, que es la suma de 10, 44, 188 y 640. 
 
-
-Enunciat:
-Una botiga té una promoció que aplica el descompte del 10% als productes
-el valor numèric del qual sigui parell. Per això es requereix implementar funcions 
-per sumar una llista de valors parells i retornar aquesta suma.
-
-Implementa les funcions 'sum_even_numbers_in_list_while(list_numbers)',
-'sum_even_numbers_in_list_for(list_numbers)' i
-'sum_even_numbers_in_list_do_while(list_numbers)' on el paràmetre
-sigui una llista de números i utilitzi un bucle 'WHILE', 'FOR' i 'DO WHILE', respectivament,
-per a la seva implementació. Totes les funcions han de retornar la suma dels números parells.
-
-Paràmetres:
-     list_numbers (List): llista de preus que es vol sumar
-
-Exemple:
-     Entrada:
-     shopping_list = [10, 449, 33, 44, 188, 640]
-     sum_even_numbers_in_list_while(shopping_list)
-     sum_even_numbers_in_list_for(shopping_list)
-     sum_even_numbers_in_list_do_while(shopping_list)
-
-     Sortida:
-     En tots tres casos el resultat és 882, que és la suma de 10, 44, 188 i 640.
 """
 
 
 def sum_even_numbers_in_list_while(list_numbers):
     # Write here your code
-    pass
+    total = 0 # Inicializo total a 0 ( suma de numeros )
+    i = 0 # indice para la lista
+    
+    while i < len(list_numbers): # mientras indice esté dentro de lista hacer:
+        if list_numbers[i] % 2 == 0: # si i es par:
+            total += list_numbers[i] # sumo al acumulador
+        i += 1 # pasa al siguinte indice
+        
+    return total # devuelvo las suma de pares
+
 
 
 def sum_even_numbers_in_list_for(list_numbers):
     # Write here your code
-    pass
+    total = 0 # inicializo en cero 
+    
+    for number in list_numbers: # RECORRE CADA NUMERO De LA LISTA
+        if number % 2 == 0: # Si es par: 
+            total += number #Lo sumo al acumulaor
+            
+    return total # devueve la suma
+
 
 
 def sum_even_numbers_in_list_do_while(list_numbers):
     # Write here your code
-    pass
+    total = 0
+    i = 0
+    
+    if len(list_numbers) == 0: # si la lista está vacia 
+        return 0 # devuelve cero
+    
+    while True: # bucle que no para hasta llegar al break
+        if list_numbers[i] % 2 == 0: # si el valor actual es par:
+            total += list_numbers[i] # se pone en el acumulador
+        
+        i += 1# sigue o suma 1 posicion al siguiente valor
+        
+        if i >= len(list_numbers):# si no hay mas elementos: 
+            break # sal del bucle
+            
+    return total # resueltado de suma
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script

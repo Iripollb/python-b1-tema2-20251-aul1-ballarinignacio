@@ -31,7 +31,8 @@ El año a comprobar será '2000', por lo que:
 """
 
 
-def check_leap_year(year): # Se define la función.
+def check_leap_year(
+    year): # Se define la función.
     if year % 4 == 0 and year % 100 != 0: # Se comprueba si es divisible entre 4 y NO entre 100
         return True # si es bisiesto devuelve true.
     elif year % 100 == 0 and year % 400 == 0:  # si lo anterior no es correcto ¿se puede dividir entre 100 y 400?
@@ -46,4 +47,4 @@ def check_leap_year(year): # Se define la función.
 # Si vols provar el teu codi, descomenta les línies següents i executa
 # l'script
 
-print(check_leap_year(2000))
+# print(check_leap_year(2000))

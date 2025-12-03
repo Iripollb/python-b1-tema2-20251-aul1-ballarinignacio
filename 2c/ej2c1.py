@@ -23,35 +23,19 @@ Ejemplo:
     - En el tercer caso el resultado es: An unexpected error has occurred: int() argument
     must be a string, a bytes-like object or a number, not 'list'    
     
-Enunciat:
-Implementa la funció 'convert_to_integer(string)' que rebi com a paràmetre una
-cadena i retorneu un name enter si és possible. En cas contrari, heu de retornar
-un missatge indicant que la cadena no pot ser convertida a un name enter o
-un missatge d'error inesperat. Per a l'error 'ValueError' heu de retornar "The
-string cannot be converted to an integer"; si és qualsevol altra excepció, ha de
-mostrar "An unexpected error has occurred:" seguit de l'error.
 
-Paràmetres:
-string (str): cadena que voleu convertir a un name enter.
 
-Exemple:
-     Entrada:
-     convert_to_integer("123")
-     convert_to_integer("foo")
-     convert_to_integer(["3.14"])
-     
-
-     Sortida:
-     - En el primer cas el resultat és: 123
-     - En el segon cas el resultat és: The string cannot be converted to an integer
-     - En el tercer cas el resultat és: An unexpected has occurred: int() argument
-     must be a string, a bytes-like object or a number, not 'list'
 """
 
 
 def convert_to_integer(string):
-    # Write here your code
-    pass
+    try:   # InInicio bloque el cual si está bien no dará error
+        return int(string)  # convierto la cadena a número entero y lo devuelvo 
+    except ValueError:  # Si ocurre un ValueError (la cadena no es un número válido) hará lo siguente:
+        return "The string cannot be converted to an integer"     # devolverá el mensaje The string cannot be converted to an integer
+    except Exception as e:  # Si ocurre cualquier otro error hará:
+        return f"An unexpected error has occurred: {e}"   # dovolverá: An unexpected error has occurred
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script

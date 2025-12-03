@@ -22,36 +22,16 @@ Ejemplo:
     742.5
 
 
-Enunciat:
-Implementa una funció 'triangle_area_calculate', que rebi dos paràmetres,
-que corresponen a l'alçada i la base d'un triangle i que han de
-ser números positius. Aquests paràmetres han de ser nomenats correctament,
-considerant les bones pràctiques de programació PEP8.
-La funció ha de retornar el càlcul de l'àrea d'un triangle mitjançant les
-dades introduïdes, addicionalment, el codi ha de tenir comentaris de manera
-que es vagi explicant el procediment.
-
-Paràmetres:
-Són dos paràmetres, que corresponen a l'alçada i la base de
-un triangle i que han de ser números positius. S'han de crear correctament
-utilitzant les bones pràctiques de programació PEP8.
-
-
-Exemple:
-     Entrada:
-     triangle_area_calculate(33, 45)
-
-     Sortida:
-     742.5
-
 """
 
 
 def triangle_area_calculate(
     base, height):
-    # Write here your code
-    pass
+    if base <= 0 or height <= 0: # miro si base y height son mayores a 0.
+        raise ValueError("Base y altura deben ser mayores a 0")  # si no lo son d aun error.
 
+    area = (base * height) / 2  # introduzco el cálculo (base * altura) / 2
+    return area         # devuelvo el valor area.
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta
 # el script

@@ -22,37 +22,21 @@ Ejemplo:
     Entrada: 'abc'
     Salida: TypeError
 
-Enunciat:
-Implementa una funció 'convert_kg_to_lb' que rebi com a paràmetre un valor
-numèric anomenat 'kg' que correspon al valor que es vol convertir de
-quilograms a lliures.
-
-El valor introduït no pot ser menor o igual que '0' si s'introdueix un valor
-menor o igual a '0' s'ha de crear un ValueError. El valor introduït ha de ser de
-tipus numèric de manera que si s'introdueix un altre valor que no sigui numèric s'haurà
-de crear un TypeError.
-
-Paràmetres:
-kg = Valor numèric que representa els quilograms per convertir lliures.
-
-Exemple:
-     Entrada: 50
-     Sortida: 110.23
-
-     Entrada: 0
-     Sortida: ValueError
-
-     Entrada: 'abc'
-     Sortida: TypeError
-
 """
 
 
-def kg_to_lb(kg):
-    # Write here your code
-    pass
+def kg_to_lb(kg):   
+    if not isinstance(kg, (int, float)):   # Compruebo si kg es int o float y si NO es número hace:
+        raise TypeError("The value must be numeric") # Lanzo un error de tipo si no es número
+
+    if kg <= 0:      # Comprueo si el valor es menor o igual a 0
+        raise ValueError("The value must be greater than 0")  # Lanzo un error de valor si es inválido
+
+    pounds = kg * 2.20462  # Convierto kilogramos a libras (1 kg = 2.20462 lb)
+    return round(pounds, 2)   # Devuelvo el resultado redondeado a 2 decimales
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-#print(kg_to_lb(50))
+# print(kg_to_lb(50))

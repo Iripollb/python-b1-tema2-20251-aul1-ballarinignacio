@@ -40,5 +40,5 @@ def get_element_from_list(items_list, index) -> str:
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# print(get_element_from_list(["Pencil", "Pen", "Eraser", "Notebook", "Ruler"], 3))
-# print(get_element_from_list(["Pencil", "Pen", "Eraser", "Notebook", "Ruler"], 5))
+print(get_element_from_list(["Pencil", "Pen", "Eraser", "Notebook", "Ruler"], 3))
+print(get_element_from_list(["Pencil", "Pen", "Eraser", "Notebook", "Ruler"], 5))
